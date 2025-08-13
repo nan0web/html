@@ -48,7 +48,7 @@ describe("README.md", () => {
 	})
 
 	it("Generating HTML from NAN0 object with class and id shortcuts", async () => {
-		// import { HTMLTransformer } from '@nan0web/html'
+		// import HTMLTransformer from '@nan0web/html'
 
 		const transformer = new HTMLTransformer()
 		const nano = {
@@ -82,7 +82,7 @@ describe("README.md", () => {
 	 * Container for default HTML tag names and shortcuts.
 	 */
 	it("Default HTML tag mappings and self-closing helpers.", () => {
-		// import HTMLTags from "@nan0web/html/src/HTMLTags.js"
+		// import { HTMLTags } from "@nan0web/html"
 
 		const tags = new HTMLTags()
 		tags.$default // "p"

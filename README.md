@@ -25,7 +25,7 @@ The package is ESM‑only (`"type": "module"`).
 ## Quick start
 
 ```js
-import { HTMLTransformer, HTMLTags, escape } from "@nan0web/html"
+import HTMLTransformer from "@nan0web/html"
 
 const transformer = new HTMLTransformer()
 const nano = {
@@ -51,7 +51,7 @@ console.log(html)
 Container for default HTML tag names and shortcuts.
 
 ```js
-import HTMLTags from "@nan0web/html/src/HTMLTags.js"
+import { HTMLTags } from "@nan0web/html"
 
 const tags = new HTMLTags()
 tags.$default // "p"
