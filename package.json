@@ -1,0 +1,48 @@
+{
+	"name": "@nan0web/html",
+	"version": "1.0.0",
+	"description": "HTML transformer and utilities.",
+	"type": "module",
+	"main": "./src/index.js",
+	"types": "./types/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./types/index.d.ts",
+			"import": "./src/index.js"
+		}
+	},
+	"scripts": {
+		"build": "tsc",
+		"test": "node --test"
+	},
+	"files": [
+		"src",
+		"types"
+	],
+	"keywords": [
+		"nano",
+		"nan0",
+		"nan0web",
+		"mail",
+		"email",
+		"nodemailer",
+		"node"
+	],
+	"author": "ЯRаСлав YaRaSLove <support@yaro.page>",
+	"license": "ISC",
+	"dependencies": {
+		"nodemailer": "^6.10.1"
+	},
+	"devDependencies": {
+		"@nan0web/db": "workspace:*",
+		"@nan0web/db-fs": "workspace:*",
+		"@nan0web/transformer": "workspace:*",
+		"@nan0web/xml": "workspace:*"
+	},
+	"peerDependencies": {
+		"@nan0web/db": "^1.0.0",
+		"@nan0web/db-fs": "^1.0.0",
+		"@nan0web/transformer": "^1.0.0",
+		"@nan0web/xml": "^1.0.0"
+	}
+}
