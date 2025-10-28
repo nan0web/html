@@ -99,10 +99,10 @@ describe('HTMLTransformer', () => {
 				]
 			},
 		]
-		const expected = '<div class="d-flex" id="main">' +
+		const expected = '<div id="main" class="d-flex">' +
 			'<a class="btn btn-primary">Button</a>' +
 			'<a id="more">More</a>' +
-			'<a class="btn btn-success" id="detail">Detail</a>' +
+			'<a id="detail" class="btn btn-success">Detail</a>' +
 			'</div>'
 		const tr = new HTMLTransformer({ eol: "", tab: "" })
 		const xml = await tr.encode(data)

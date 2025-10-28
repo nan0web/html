@@ -1,5 +1,4 @@
-export default HTMLTags;
-declare class HTMLTags {
+export default class HTMLTags {
     $default: string;
     $nonEmptyTags: string[];
     $attrTrue: string;

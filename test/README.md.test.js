@@ -87,13 +87,13 @@ describe("README.md", () => {
 		const tags = new HTMLTags()
 		tags.$default // "p"
 		tags.ul // "li"
-		tags.$selfClosed("script") // "></script>"
-		tags.$selfClosed("br") // ">"
+		tags.$selfClosed.apply(tags, ["script"]) // "></script>"
+		tags.$selfClosed.apply(tags, ["br"]) // ">"
 
 		assert.equal(tags.$default, "p")
 		assert.equal(tags.ul, "li")
-		assert.equal(tags.$selfClosed("script"), "></script>")
-		assert.equal(tags.$selfClosed("br"), ">")
+		assert.equal(tags.$selfClosed.apply(tags, ["script"]), "></script>")
+		assert.equal(tags.$selfClosed.apply(tags, ["br"]), ">")
 	})
 
 	/**

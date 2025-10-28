@@ -1,4 +1,4 @@
-class HTMLTags {
+export default class HTMLTags {
 	$default = 'p'
 	$nonEmptyTags = ['script', 'style']
 	$attrTrue = ''
@@ -31,5 +31,3 @@ class HTMLTags {
 		return '>'
 	}
 }
-
-export default HTMLTags

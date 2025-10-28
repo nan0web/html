@@ -1,3 +1,5 @@
+/.datasets/
+.cache/
 /node_modules/
 /dist/
 /chat/
