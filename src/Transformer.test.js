@@ -65,6 +65,7 @@ describe('HTMLTransformer', () => {
 				]
 			}
 		]
+
 		const html = `<!DOCTYPE html>\n` +
 			`<html lang="en">\n\t` +
 			`<head>\n\t\t` +
@@ -85,8 +86,8 @@ describe('HTMLTransformer', () => {
 			`</html>`
 
 		const tr = new HTMLTransformer()
-		const xml = await tr.encode(data)
-		assert.equal(xml, html)
+		const result = await tr.encode(data)
+		assert.equal(result, html)
 	})
 
 	it('should render proper html attributes defined in tags: div.d-flex#main > a.btn', async () => {
@@ -99,14 +100,14 @@ describe('HTMLTransformer', () => {
 				]
 			},
 		]
-		const expected = '<div class="d-flex" id="main">' +
+		const expected = '<div id="main" class="d-flex">' +
 			'<a class="btn btn-primary">Button</a>' +
 			'<a id="more">More</a>' +
-			'<a class="btn btn-success" id="detail">Detail</a>' +
+			'<a id="detail" class="btn btn-success">Detail</a>' +
 			'</div>'
 		const tr = new HTMLTransformer({ eol: "", tab: "" })
-		const xml = await tr.encode(data)
-		assert.equal(xml, expected)
+		const result = await tr.encode(data)
+		assert.equal(result, expected)
 	})
 
 	it('should properly renders ol > li with their classes', async () => {
